@@ -1,0 +1,51 @@
+.box{
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  background: pink;
+}
+.products--grid{
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 5,fr;
+  grid-gap:15px ;
+  div{
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2,p{
+      margin: 0px;
+    }
+  }
+  @media screen and  (min-width: 40em){
+    .products--grid{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid{
+    border-color: red;
+  }
+  &.valid{
+    border-color: green;
+  }
+}
+.message.error{
+  background: red;
+  color: beige;
+  opacity: 0;
+  transition: all linear .5s;
+  &.invalid{
+    opacity: 1;
+  }
+}
+.styles{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

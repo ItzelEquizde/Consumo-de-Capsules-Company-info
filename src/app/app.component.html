@@ -1,0 +1,46 @@
+<div style="background-color: magenta;">
+  <br>
+  Carrera Sanchez Citlally Itzel
+  <br>
+  <br>
+</div>
+<hr>
+
+<div class="wrapper">
+  <div class="gallery">
+    <div class="item" *ngFor="let item of dataaa">
+      <h1>{{item.name}}</h1>
+    </div>
+  </div>
+</div>
+
+<h1>Capsule</h1>
+<div class="wrapper">
+  <div class="gallery">
+    <div class="item" *ngFor="let item of dataa">
+
+      <h1>{{item.serial}}</h1>
+      <p>{{item.status}}</p>
+      <p>{{item.type}}</p>
+      <p>{{item.last_update}}</p>
+      <p>{{item.id}}</p>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+
+<div class="wrapper">
+  <div class="gallery">
+    <div class="item" *ngFor="let item of data">
+      <h1>{{ item.name }}</h1>
+      <p>{{ item.description }}</p>
+      <div class="imgs">
+        <img [src]="img" alt="" *ngFor="let img of item.flickr_images">
+
+      </div>
+    </div>
+  </div>
+</div>
